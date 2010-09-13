@@ -49,6 +49,8 @@ function stardate_post() {
 	return $stardate;
 }
 
+// Thanks to Joe Crawford (@artlung) for convincing me to use multiple functions
+
 // Get current date/time for display in the theme
 function stardate_now($style) {
 	$options = get_option('stardate_options');
@@ -107,8 +109,6 @@ if ($options['option_set1'] === "Enabled") {
 	add_filter('the_time', 'stardate_post');
 }
 
-
-
 // ADMIN PAGES
 add_action('admin_menu','stardate_menu');
 function stardate_menu() {
@@ -119,7 +119,7 @@ add_action('admin_init','stardate_admin_init');
 function stardate_admin_init() {
 	register_setting('stardate_plugin_options','stardate_options');
 	add_settings_section('stardate_image','','stardate_image_html','stardate_options');
-	add_settings_section('stardate_theme_settings','Stardate Theme Settings','stardate_section_text','stardate_options');
+	add_settings_section('stardate_theme_settings','Stardate Settings For Your Theme','stardate_section_text','stardate_options');
 	add_settings_field('stardate_field','','stardate_field_string','stardate_options','stardate_theme_settings');
 	add_settings_field('stardate_style','','stardate_style_string','stardate_options','stardate_theme_settings');
 	add_settings_field('stardate_text','','stardate_text_string','stardate_options','stardate_theme_settings');
@@ -167,7 +167,7 @@ function stardate_text_string() {
 
 function stardate_section_text() {
 	echo "
-	<p>The Stardate Plugin will allow you to display stardates on your WordPress-powered website in your existing theme.</p>
+	<p>The Stardate Plugin will allow you to display stardates on your WordPress-powered website within your existing theme.</p>
     <p>You can choose to have your post and page publication dates/times replaced with the current stardate in either the classic Star Trek series format or the latest movie (Star Trek XI) format.</p>
 	";
 }
@@ -191,7 +191,7 @@ function stardate_image_html() {
 function stardate_admin() {
 ?>
 	<div class="wrap">
-    <h2>Stardate Display Setup</h2>
+    <h2>Stardate Setup</h2>
     <form action="options.php" method="post">
     <table class="form-table">
     <?php 

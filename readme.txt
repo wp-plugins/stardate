@@ -8,9 +8,9 @@ Stable tag: 1.0
 
 == Description ==
 
-Convert the WordPress dates in your Dashboard to the current stardate.  Also adds some custom functions and shortcodes for use in themes and posts/pages.
+Convert WordPress publication dates in your posts and pages to the current stardate.  Also adds a custom function and a few shortcodes for use in themes and the post editor.
 
-Get your nerd on!
+Get your geek on!
 
 For more information on the WordPress <a href="http://seoserpent.com/wordpress/stardate">Stardate</a> plugin and how to use it, visit the information page at the preceding link.
 
