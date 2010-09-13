@@ -4,7 +4,7 @@ Plugin Name: Stardate
 Plugin URI: http://seoserpent.com/wordpress/stardate
 Version: 1.0
 License: GPL2
-Description: Convert WordPress dates in your theme to the current stardate.  Also adds a custom function and a few shortcodes for use in themes and posts/pages.
+Description: Convert WordPress dates in your posts and pages to the current stardate. Also adds a custom function and a few shortcodes for use in themes and posts/pages.
 Author: Marty Martin
 Author URI: http://seoserpent.com/wordpress/
 */
